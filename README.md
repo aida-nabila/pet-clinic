@@ -11,7 +11,7 @@ Veterinary appointment management powered by Java EE.
 ## Features
 
 - **User Management**: Secure login and registration for pet owners
-- **Pet Profiles**: Create and manage pet medical profiles
+- **Pet Profiles**: Create and manage pet profiles
 - **Appointment Scheduling**: Book, view, and cancel veterinary appointments
 - **Staff Portal**: Manage appointments
 
