@@ -75,10 +75,16 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="form-label">Medical Information</label>
+                            <textarea name="petInfo" class="form-input" rows="4" 
+                                      placeholder="Enter medical information..."><%= pet.getPetInfo() != null ? pet.getPetInfo() : ""%></textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label class="form-label">Current Image</label>
                             <div class="current-image-container">
                                 <% if (pet.getPetPicture() != null && pet.getPetPicture().length > 0) {
-                                    String base64Image = java.util.Base64.getEncoder().encodeToString(pet.getPetPicture());
+                                        String base64Image = java.util.Base64.getEncoder().encodeToString(pet.getPetPicture());
                                 %>
                                 <img src="data:image/jpeg;base64,<%= base64Image%>" 
                                      style="max-width: 200px; max-height: 200px; border-radius: 8px;" 

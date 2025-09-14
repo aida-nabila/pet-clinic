@@ -120,12 +120,14 @@ public class PetServlet extends HttpServlet {
             String petName = request.getParameter("petName");
             String petSpecies = request.getParameter("petSpecies");
             String petBreed = request.getParameter("petBreed");
+            String petInfo = request.getParameter("petInfo");
 
             // Create new pet
             Pet pet = new Pet();
             pet.setPetName(petName);
             pet.setPetSpecies(petSpecies);
             pet.setPetBreed(petBreed);
+            pet.setPetInfo(petInfo);
             pet.setUserId(currentUser);
 
             // Handle file upload
@@ -170,6 +172,7 @@ public class PetServlet extends HttpServlet {
             String petName = request.getParameter("petName");
             String petSpecies = request.getParameter("petSpecies");
             String petBreed = request.getParameter("petBreed");
+            String petInfo = request.getParameter("petInfo");
 
             if (petIdStr == null || petIdStr.isEmpty()) {
                 request.getSession().setAttribute("errorMessage", "Pet ID is required!");
@@ -191,6 +194,7 @@ public class PetServlet extends HttpServlet {
             pet.setPetName(petName);
             pet.setPetSpecies(petSpecies);
             pet.setPetBreed(petBreed);
+            pet.setPetInfo(petInfo);
 
             // Handle file upload - only update if new file is provided
             Part filePart = request.getPart("petPicture");
@@ -265,7 +269,7 @@ public class PetServlet extends HttpServlet {
             }
 
             // Get pets for current user
-            List<Pet> pets = petService.getPetsByOwner(currentUser.getId());
+            List<Pet> pets = petService.getPetsByUser(currentUser.getId());
             request.setAttribute("pets", pets);
 
             request.getRequestDispatcher("/manage-pet.jsp").forward(request, response);

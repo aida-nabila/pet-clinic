@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/NetBeansProjects/PetClinic%20(1)/PetClinic/PetClinic-war/src/java/controller/AppointmentServlet.java</file>
+            <file>file:/C:/NetBeansProjects/PetClinic/PetClinic/PetClinic-war/web/manage-appointment.jsp</file>
+            <file>file:/C:/NetBeansProjects/PetClinic/PetClinic/PetClinic-war/web/add-pet.jsp</file>
+            <file>file:/C:/NetBeansProjects/PetClinic/PetClinic/PetClinic-war/src/java/controller/PetServlet.java</file>
+            <file>file:/C:/NetBeansProjects/PetClinic/PetClinic/PetClinic-war/web/edit-pet.jsp</file>
         </group>
     </open-files>
 </project-private>

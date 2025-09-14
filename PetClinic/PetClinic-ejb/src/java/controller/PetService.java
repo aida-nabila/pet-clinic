@@ -60,16 +60,16 @@ public class PetService implements PetServiceLocal {
         }
     }
 
-    public List<Pet> getPetsByOwner(Long ownerId) {
+    public List<Pet> getPetsByUser(Long id) {
         try {
             TypedQuery<Pet> query = em.createQuery(
-                    "SELECT p FROM Pet p WHERE p.userId.id = :ownerId ORDER BY p.petName",
+                    "SELECT p FROM Pet p WHERE p.userId.id = :id ORDER BY p.petName",
                     Pet.class
             );
-            query.setParameter("ownerId", ownerId);
+            query.setParameter("id", id);
             return query.getResultList();
         } catch (Exception e) {
-            throw new RuntimeException("Error retrieving pets by owner: " + e.getMessage(), e);
+            throw new RuntimeException("Error retrieving pets by user: " + e.getMessage(), e);
         }
     }
 

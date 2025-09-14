@@ -23,7 +23,7 @@ public interface PetServiceLocal {
 
     Pet getPetById(Long petId);
 
-    List<Pet> getPetsByOwner(Long ownerId);
+    List<Pet> getPetsByUser(Long id);
 
     List<Pet> getAllPets();
 

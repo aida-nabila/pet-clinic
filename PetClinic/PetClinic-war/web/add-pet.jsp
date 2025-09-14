@@ -60,6 +60,12 @@
                             <input type="text" name="petBreed" class="form-input">
                         </div>
 
+                        <!-- Medical Information -->
+                        <div class="form-group">
+                            <label class="form-label">Medical Information</label>
+                            <textarea name="petInfo" class="form-input" rows="4" placeholder="Enter medical information..."></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label class="form-label">Pet Picture</label>
                             <input type="file" name="petPicture" class="form-file" accept="image/*">

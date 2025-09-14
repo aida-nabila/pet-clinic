@@ -36,6 +36,7 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Pet.findByPetName", query = "SELECT p FROM Pet p WHERE p.petName = :petName"),
     @NamedQuery(name = "Pet.findByPetSpecies", query = "SELECT p FROM Pet p WHERE p.petSpecies = :petSpecies"),
     @NamedQuery(name = "Pet.findByPetBreed", query = "SELECT p FROM Pet p WHERE p.petBreed = :petBreed"),
+    @NamedQuery(name = "Pet.findByPetInfo", query = "SELECT p FROM Pet p WHERE p.petInfo = :petInfo"),
     @NamedQuery(name = "Pet.findByPictureFileName", query = "SELECT p FROM Pet p WHERE p.pictureFileName = :pictureFileName")})
 public class Pet implements Serializable {
 
@@ -59,6 +60,8 @@ public class Pet implements Serializable {
     private String petSpecies;
     @Column(name = "PET_BREED")
     private String petBreed;
+    @Column(name = "PET_INFO")
+    private String petInfo;
     @Column(name = "PICTURE_FILE_NAME")
     private String pictureFileName;
     @JoinColumn(name = "USER_ID", referencedColumnName = "ID")
@@ -108,6 +111,14 @@ public class Pet implements Serializable {
 
     public void setPetBreed(String petBreed) {
         this.petBreed = petBreed;
+    }
+
+    public String getPetInfo() {
+        return petInfo;
+    }
+
+    public void setPetInfo(String petInfo) {
+        this.petInfo = petInfo;
     }
 
     public String getPictureFileName() {
